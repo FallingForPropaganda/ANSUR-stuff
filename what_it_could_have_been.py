@@ -1,5 +1,5 @@
 import ansur_functions as funcs
-print("\n\n\n\n\n\n")
+print(funcs.fourty_lines())
 funcs.resize()
 
 input('')
@@ -22,7 +22,7 @@ print(f"{funcs.better_print('I am using ANSUR datasets which are based on adult 
 print(f"{funcs.better_print('There is also no underbust measurement in ANSUR 2 so I used chest circumference instead.')}")
 print(f"{funcs.better_print('Also you need numpy installed for this to work.')}")
 print(funcs.blank_line())
-print(f"{funcs.better_print('Press enter to continue')}")
+print(f"{funcs.better_print('Press enter to continue...')}")
 print(funcs.blank_line())
 print(funcs.print_line())
 input('')
@@ -106,8 +106,8 @@ else:
     print(new_bidel, new_hipbreadth, new_waist, new_hipcirc, new_height)
 
 
-print(funcs.fourty_lines() + funcs.print_line() + "\n" + funcs.blank_line())
-for x in range(5):
+print(funcs.fourty_lines() + funcs.print_line())
+for x in range(6):
         print(funcs.better_print(' '))
 print(f"{funcs.better_print(f'Had you been born opposite your AGAB here is how your measurements would change based on ANSUR {version}:')}")
 print(f"{funcs.better_print(f'Bideltoid shoulder breadth: {round(bideltoid/multiplier, 1)} -> {round(new_bidel/multiplier, 1)} {units}')}")
@@ -123,9 +123,31 @@ elif version == '2' and units == 'cm':
     print(f"{funcs.better_print(f'Height: {round(height*2.54, 1)} -> {round(new_height*2.54, 1)} {units}')}")
 else:
     print(f"{funcs.better_print(f'Height: {int(height)//12}ft{round((height)%12, 1)} -> {int(new_height)//12}ft{round((new_height)%12, 1)} {units}')}")
+print(funcs.blank_line())
+print(f"{funcs.better_print('Press enter to continue...')}")
 for x in range(6):
         print(funcs.better_print(' '))
 print(funcs.print_line())
+input('')
+
+
+print(funcs.fourty_lines() + funcs.print_line() + "\n" + funcs.blank_line())
+for x in range(6):
+        print(funcs.better_print(' '))
+    
+print(f"{funcs.better_print(f'Thats all for now, if you want to keep bonepilling yourself try out passoid_detector.py')}")
+print(funcs.blank_line())
+print(f"{funcs.better_print(f'You can follow my reddit, u/FallingForPropaganda')}")
+print(funcs.blank_line())
+print(f"{funcs.better_print(f'If you are interested in more bonepills, watch the repository for more updates')}")
+print(f"{funcs.better_print(f'In the future Im planning on making an anthro.cs like app that supports ANSUR II, imperial units, and shows SDs from the norm')}")
+print(funcs.blank_line())
+print(f"{funcs.better_print(f'Press enter to exit...')}")
+for x in range(6):
+        print(funcs.better_print(' '))
+print(funcs.print_line())
+input("")
+print(funcs.fourty_lines())
 '''
 new_bidel
 new_hipbreadth
