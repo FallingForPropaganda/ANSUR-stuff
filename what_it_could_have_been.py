@@ -137,7 +137,7 @@ for x in range(6):
     
 print(f"{funcs.better_print(f'Thats all for now, if you want to keep bonepilling yourself try out passoid_detector.py')}")
 print(funcs.blank_line())
-print(f"{funcs.better_print(f'You can follow my reddit, u/FallingForPropaganda')}")
+print(f"{funcs.better_print(f'You can follow my reddit, u/FallingForPropaganda or add me on discord @ Toast#7553')}")
 print(funcs.blank_line())
 print(f"{funcs.better_print(f'If you are interested in more bonepills, watch the repository for more updates')}")
 print(f"{funcs.better_print(f'In the future Im planning on making an anthro.cs like app that supports ANSUR II, imperial units, and shows SDs from the norm')}")
