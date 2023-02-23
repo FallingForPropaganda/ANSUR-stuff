@@ -34,7 +34,7 @@ def ratio_gen(cords):
     return list1
 
 def avg_and_sd_calc(inputlist):
-    sd = numpy.std(inputlist)
+    sd = np.std(inputlist)
     total = 0
     for item in inputlist:
         total += item
