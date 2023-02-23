@@ -1,3 +1,9 @@
+#I made this to generate charts showing compairisons between 2 measurements
+#There are 5 input varilables
+#genders_to_show, which can be a string of 'f', 'm', or 'mf', it toggles which genders to display
+#units, which is either 'cm' or 'in', it is used for unit conversions
+#input_x and input_y, which are inputs for the x and y coordinates that will be graphed 
+#measurement_x and measurement_y, which are the measurements being graphed
 import csv
 import numpy as np
 import pandas as pd
@@ -9,16 +15,16 @@ import scipy.stats as st
 #input variables
 genders_to_show = 'mf'                             
 units = 'in'                                     
-input_x = 37
-input_y = 42
-measurement_x = 'Buttocks Circumference'
-measurement_y = 'Shoulder Circumference'
+input_x = 75
+input_y = 14.5
+measurement_x = 'Height'
+measurement_y = 'Hip Breadth'
 
 #finds the csv value for each display title
 measurement1 = funcs.linker(measurement_x)             
 measurement2 = funcs.linker(measurement_y)                    
 
-#generates a dictionary in the format gender, measurement 1, measurement 2, then turns it into a pandas dataframe
+#generates a dictionary in the format {gender, measurement 1, measurement 2}, then turns it into a pandas dataframe
 #also has the option to do one or both genders
 dataf = funcs.dict_gen(measurement1, measurement2, "ansur2_female.csv")
 datam = funcs.dict_gen(measurement1, measurement2, "ansur2_male.csv")
@@ -78,7 +84,7 @@ min_x = min_x - x_dif/40
 
 
 
-#uses the dictionary to create an a list of coordinates, also gets line of best fit info
+#gnerates info for line of best fit and band of 1 SD +- the line of best fit
 xm, ymt, ymb, sd_m, slope_m, intercept_m = funcs.top_bottom_line_gen(
 measurement1,
 measurement2,
@@ -100,7 +106,6 @@ np.array(dataf[measurement2])
 #finds how far from the female and male line of best fit you are in SDs
 sd_from_m = round((input_y - (input_x * slope_m + intercept_m) )/sd_m, 2)
 sd_from_f = round((input_y - (input_x * slope_f + intercept_f) )/sd_f, 2)
-print(sd_from_m, sd_from_f)
 
 colormap = {"f": "#FADADD80", "m": "#ADD8E680", }
 #colormap2 = {"f": "#fce9ea", "m": "#d8ecf3", }, for if you want non-transparent centers

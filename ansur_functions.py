@@ -1,5 +1,4 @@
 import csv
-import numpy
 import pandas as pd
 import numpy as np
 from scipy.stats import linregress
